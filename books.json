@@ -1,0 +1,65 @@
+[
+	{
+		"title": "JavaScript For Beginners",
+		"image": "./img/book-images/javascript.jpg",
+		"about": "Learn JavaScript Programming with ease",
+		"pages": 115,
+		"year": "2017"
+	},
+	{
+		"title": "HTML & CSS Crash Course",
+		"image": "./img/book-images/html-css.jpg",
+		"about": "Learn html and css with easy to follow-step-by-step tutorials",
+		"pages": 71,
+		"year": "2015"
+	},
+	{
+		"title": "Linux",
+		"image": "./img/book-images/linux.jpg",
+		"about": "Command Line and Shell Scripting Bible",
+		"pages": 818,
+		"year": "2014"
+	},
+	{
+		"title": "Java",
+		"image": "./img/book-images/java.jpg",
+		"about": "Java Programming For Beginners",
+		"pages": 221,
+		"year": "2016"
+	},
+	{
+		"title": "The Complete Guide to Blender Graphics",
+		"image": "./img/book-images/blender.jpg",
+		"about": "Computer Modeling & Animation",
+		"pages": 610,
+		"year": "2016"
+	},
+	{
+		"title": "How to Hack Computers",
+		"image": "./img/book-images/how-to-hack-computers.jpg",
+		"about": "Hacking for beginners, penetration testing",
+		"pages": 138,
+		"year": "2015"
+	},
+	{
+		"title": "PHP",
+		"image": "./img/book-images/php.jpg",
+		"about": "Learn PHP in 24 Hours or Less",
+		"pages": 119,
+		"year": "2016"
+	},
+	{
+		"title": "Mastering Machine Learning with Python in Six Steps",
+		"image": "./img/book-images/python.jpg",
+		"about": "A Practical Implementation Guide to Predictive",
+		"pages": 374,
+		"year": "2017"
+	},
+	{
+		"title": "Learn to Program with C",
+		"image": "./img/book-images/learn-C.jpg",
+		"about": "Learn to Program using the Popular C Programming Language",
+		"pages": 323,
+		"year": "2015"
+	}
+]

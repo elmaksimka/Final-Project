@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'Bazar Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Bazar Medium'), url('Bazar.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Seaside Resort NF Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Seaside Resort NF Regular'), url('SeasideResortNF.woff') format('woff');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+@font-face {
+  font-family: 'Roboto Slab Regular';
+  src: url('RobotoSlab-Regular.eot');
+  src: url('RobotoSlab-Regular.eot?#iefix') format('embedded-opentype'),
+    url('RobotoSlab-Regular.woff') format('woff'),
+    url('RobotoSlab-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

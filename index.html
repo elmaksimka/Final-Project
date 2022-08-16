@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Final Project</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="./css/fonts/fonts.css">
+  <link rel="stylesheet" href="./css/change-theme.css">
+  <script src="js/autoThemeChanger.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="navbar">
+      <ul class="navbar__menu">
+        <li class="navbar__menu__link"><a href="#about">About me</a></li>
+        <li class="navbar__menu__link"><a href="#portfolio">Portfolio</a></li>
+        <li>
+          <div class="navbar__menu__logo">
+            <img src="img/badge01.svg" alt="logo">
+            <span>JD</span>
+          </div>
+        </li>
+        <li class="navbar__menu__link"><a href="#blog">My blog</a></li>
+        <li class="navbar__menu__link"><a href="#contact">Contact me</a></li>
+        <div class="toggle-container">
+          <li><img src="./img/change-theme.svg" alt="change-theme" class="light_theme" onclick="lightTheme()"
+              title="Light mode"></li>
+          <li><img src="./img/change-theme.svg" class="dark_theme" onclick="darkTheme()" title="Dark mode">
+          </li>
+        </div>
+      </ul>
+    </div>
+  </header>
+  <div class="progress">
+    <div class="progress-container">
+      <div class="progress-bar" id="myBar"></div>
+    </div>
+  </div>
+  <div class="slider">
+    <h1>Retro</h1>
+    <div class="slider__item">
+      <h4>Old style portfolio</h4>
+    </div>
+    <div class="slider__slideshow">
+      <div class="slider__slideshow__image-slide">
+        <img src="img/slider/mu.webp">
+        <p class="slider__slideshow__image-slide__caption">Manchester United</p>
+      </div>
+      <div class="slider__slideshow__image-slide">
+        <img src="img/slider/man-city.svg">
+        <p class="slider__slideshow__image-slide__caption">Manchester City</p>
+      </div>
+      <div class="slider__slideshow__image-slide">
+        <img src="img/slider/barcelona.png">
+        <p class="slider__slideshow__image-slide__caption">Barcelona</p>
+      </div>
+      <div class="slider__slideshow__image-slide">
+        <img src="img/slider/chelsea.png">
+        <p class="slider__slideshow__image-slide__caption">Chelsea</p>
+      </div>
+      <div class="slider__slideshow__image-slide">
+        <img src="img/slider/borussiad.png">
+        <p class="slider__slideshow__image-slide__caption">Borussia Dortmund</p>
+      </div>
+      <a class="slider__slideshow__button slider__slideshow__button_previous" onclick="setSlides(-1)">❮</a>
+      <a class="slider__slideshow__button slider__slideshow__button_next" onclick="setSlides(1)">❯</a>
+    </div>
+    <p class="slider__text">Hello, Im John Doe</p>
+    <p class="slider__text">Welcome to Retro, My wonderful theme!</p>
+  </div>
+  <div class="about" id="about">
+    <h1>About me</h1>
+    <div class="about__divider">
+      <img src="./img/rectangle-5.svg" alt="rectangle-5">
+      <span>x x x</span>
+      <img src="./img/rectangle-5.svg" alt="rectangle-5">
+    </div>
+    <h4>Im graphic designer from Baltimore</h4>
+    <div class="about__categories">
+      <div class="about__categories__movies">
+        <div class="about__categories__movies__head">
+          <div class="about__categories__movies__head__picture">
+            <img src="./img/ellipse-3.svg" alt="ellipse-3">
+            <img src="./img/ellipse-3-copy.svg" alt="ellipse-3-copy">
+            <img src="./img/tv.svg" alt="tv">
+          </div>
+          <h2>Movies</h2>
+          <p>What I watch</p>
+          <img src="./img/rectangle-6.svg" alt="rectangle-6">
+        </div>
+        <div class="about__categories__movies__text">
+          Clutter is honest! I do believe that has to the users selfexpression. Care. Things which is a projector
+          operating system such formats are deep and profound and meaningful. It's the traditions of data. Good design
+          should be different levels. There's no rational alternative. That's come to complexity.
+        </div>
+      </div>
+      <div class="about__categories__music">
+        <div class="about__categories__music__head">
+          <div class="about__categories__music__head__picture">
+            <img src="./img/ellipse-3.svg" alt="ellipse-3">
+            <img src="./img/ellipse-3-copy.svg" alt="ellipse-3-copy">
+            <img src="./img/vinyl.svg" alt="vinyl">
+          </div>
+          <h2>Music</h2>
+          <p>What I listen</p>
+          <img src="./img/rectangle-6.svg" alt="rectangle-6">
+        </div>
+        <div class="about__categories__music__text">
+          Good design. The content, you'll love powerpoint should be different. It's about design is that part? Good
+          design is making something looks. And aesthetic. And colour defines your interface. That cannot be overtly
+          different. That has to chance. And restrained, low resolution, but you get rid of materials.
+        </div>
+      </div>
+      <div class="about__categories__clothes">
+        <div class="about__categories__clothes__head">
+          <div class="about__categories__music__head__picture">
+            <img src="./img/ellipse-3.svg" alt="ellipse-3">
+            <img src="./img/ellipse-3-copy.svg" alt="ellipse-3-copy">
+            <img src="./img/t-shirt.svg" alt="t-shirt">
+          </div>
+          <h2>Clothes</h2>
+          <p>What I wear</p>
+          <img src="./img/rectangle-6.svg" alt="rectangle-6">
+        </div>
+        <div class="about__categories__clothes__text">
+          Very honest approach and product. The other product that changes function like the absence of function. And
+          frustrating that products that it's the functional imperative, we kept going and frustrating what we are about
+          bringing order to be better and less complicated to understand.
+        </div>
+      </div>
+      <div class="about__categories__food">
+        <div class="about__categories__food__head">
+          <div class="about__categories__food__head__picture">
+            <img src="./img/ellipse-3.svg" alt="ellipse-3">
+            <img src="./img/ellipse-3-copy.svg" alt="ellipse-3-copy">
+            <img src="./img/food.svg" alt="food">
+          </div>
+          <h2>Food</h2>
+          <p>What I eat</p>
+          <img src="./img/rectangle-6.svg" alt="rectangle-6">
+        </div>
+        <div class="about__categories__food__text">
+          Simplicity. It's context. From so many different levels. There's real simplicity is. Designing and place of
+          the
+          objects we're surrounded by seem trivial. There's no rational alternative. I think that's a very complicated
+          problems without letting people have a very easy to mean so much that acknowledges.
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="portfolio" id="portfolio">
+    <h1>Portfolio</h1>
+    <div class="about__divider">
+      <img src="./img/rectangle-5.svg" alt="rectangle-5">
+      <span>x x x</span>
+      <img src="./img/rectangle-5.svg" alt="rectangle-5">
+    </div>
+    <h4>Simplicity is the ultimate sophistication</h4>
+    <span>Filter by</span>
+    <ul class="portfolio__filter">
+      <li>design</li>
+      <li>logo</li>
+      <li>photography</li>
+      <li>poster</li>
+      <li>resources</li>
+      <li>retro</li>
+      <li>t-shirts</li>
+      <li>videos</li>
+    </ul>
+    <div class="portfolio__gallery" id="portfolio__gallery"></div>
+    <div>
+      <img src="./img/rectangle-8.svg" alt="rectangle-8">
+      <button class="portfolio__button">Browse all</button>
+    </div>
+  </div>
+
+  <div class="courses-container"></div>
+
+
+  <div class="blog" id="blog">
+    <h1>My blog</h1>
+    <div class="about__divider">
+      <img src="./img/rectangle-5.svg" alt="rectangle-5">
+      <span>x x x</span>
+      <img src="./img/rectangle-5.svg" alt="rectangle-5">
+    </div>
+    <h2>News from my house</h2>
+    <!-- <div class="blog__article">
+      <img src="https://icon-library.com/images/cool-icon-picture/cool-icon-picture-18.jpg" alt=""
+        class="blog__article__photo">
+      <div class="blog__article__text">
+        <h3>The Magic Wheel</h3>
+        <div class="blog__article__text__resp">
+          <h4>July 28,2014//Admin//Fun, trevels, trends</h4>
+          <h5>1 Response</h5>
+        </div>
+        <img src="./img/rectangle-9.svg" alt="rectangle-9">
+        <p>Its not it to understand them in the objects we're playing. Products fufilling a product more innovative,
+          bullets grunts, powerful or stay at every mutivariate spacetime point of analysis. People have enormous serial
+          correlation. Good design is derived from so deep and them there's no other product useful. (MORE...)</p>
+      </div>
+    </div>
+    <div class="blog__article">
+      <img
+        src="https://fsb.zobj.net/crop.php?r=gcBCS6U9CO8W6vp2noLmDsSl6o6Mc3U9UMJPBpwOTDKc2ylumbAlVo83hIBh_R8im1KB8f1GtlhLyw8NiblotNqQpqFFNbbxPUpfQMfOjFvx88jAXWtej8wXp3AIRbZYzoU_uNvBy4b5IHlZhLPNJLiK4XXA3wAd6Qrs437RQaYXwkbqhJRN133Ez20"
+        alt="" class="blog__article__photo">
+      <div class="blog__article__text">
+        <h3>The Lonely Road</h3>
+        <div class="blog__article__text__resp">
+          <h4>July 28,2014//Admin//Fun, trevels, trends</h4>
+          <h5>3 Responses</h5>
+        </div>
+        <img src="./img/rectangle-9.svg" alt="rectangle-9">
+        <p>If you've studied design at all, you've probably encountered Lorem Ipsum placeholder text at some point.
+          Anywhere there is text, but the meaning of that text isn't particularly important, you might see Lorem Ipsum.
+          (MORE...)</p>
+      </div>
+    </div>
+    <div class="blog__article">
+      <img
+        src="https://is5-ssl.mzstatic.com/image/thumb/Purple115/v4/91/7b/4e/917b4ebe-1057-e324-6899-494998f50a3f/source/512x512bb.jpg"
+        alt="" class="blog__article__photo">
+      <div class="blog__article__text">
+        <h3>I love gasoline smell</h3>
+        <div class="blog__article__text__resp">
+          <h4>July 28,2014//Admin//Fun, trevels, trends, Web design</h4>
+          <h5>No Responses</h5>
+        </div>
+        <img src="./img/rectangle-9.svg" alt="rectangle-9">
+        <p>Many of the content, and often about their precious turfpossessed selves and principles are shortcomings of
+          seeing and colors to cover up a paicity of design. Zero out your interface. I think that are deep and profound
+          indeed these tasks and showing. (MORE...)</p>
+      </div>
+    </div> -->
+
+    <!-- <div class="blog__article__list">
+    </div>
+    <div class="blog__divider">
+      <img src="./img/rectangle-8.svg" alt="rectangle-8">
+      <button class="blog__button" onclick="loadData()">Show all posts</button>
+    </div> -->
+
+    <div class="content">
+      <button onclick="loadData()" class="load-more-button">SHOW ALL POSTS</button>
+    </div>
+  </div>
+  <div class="contact" id="contact">
+    <h1>Contact me</h1>
+    <div class="about__divider">
+      <img src="./img/rectangle5.svg" alt="rectangle5">
+      <span>x x x</span>
+      <img src="./img/rectangle5.svg" alt="rectangle5">
+    </div>
+    <h4>I`ll be glad to answer your questions!</h4>
+    <div class="error"></div>
+    <form class="contact__form" id="form">
+      <div class="contact__form__field">
+        <input type="text" name="name" id="name" class="contact__form__field__input" placeholder="Name"
+          autocomplete="off">
+        <small></small>
+      </div>
+      <div class="contact__form__field">
+        <input type="email" name="email" id="email" class="contact__form__field__input" placeholder="Email Adress"
+          autocomplete="off">
+        <small></small>
+      </div>
+      <div class="contact__form__field">
+        <input type="text" name="subject" id="subject" class="contact__form__field__input" placeholder="Subject"
+          autocomplete="off">
+        <small></small>
+      </div>
+      <div class="contact__form__field">
+        <textarea class="contact__form__field__textarea" id="textarea" placeholder="Your message"></textarea>
+      </div>
+      <div class="contact__form__submit">
+        <input type="submit" value="Send message" onclick="saveData()">
+      </div>
+    </form>
+    <div class="contact__im-social">
+      <h3>I am social</h3>
+      <img src="./img/rectangle-10.svg" alt="rectangle-10">
+      <div class="contact__im-social__pictures">
+        <a href="http://twitter.com" target="_blank">
+          <div class="contact__im-social__picture">
+            <img src="./img/ellipse-6.svg" alt="ellipse-6">
+            <img src="./img/ellipse-6-copy.svg" alt="ellipse-6-copy">
+            <img src="./img/twitter.svg" alt="twitter-icon">
+          </div>
+        </a>
+        <a href="http://facebook.com" target="_blank">
+          <div class="contact__im-social__picture">
+            <img src="./img/ellipse-6.svg" alt="ellipse-6">
+            <img src="./img/ellipse-6-copy.svg" alt="ellipse-6-copy">
+            <img src="./img/facebook.svg" alt="fb-icon">
+          </div>
+        </a>
+        <a href="http://instagram.com" target="_blank">
+          <div class="contact__im-social__picture">
+            <img src="./img/ellipse-6.svg" alt="ellipse-6">
+            <img src="./img/ellipse-6-copy.svg" alt="ellipse-6-copy">
+            <img src="./img/instagram.svg" alt="inst-icon">
+          </div>
+        </a>
+        <a href="http://youtube.com" target="_blank">
+          <div class="contact__im-social__picture">
+            <img src="./img/ellipse-6.svg" alt="ellipse-6">
+            <img src="./img/ellipse-6-copy.svg" alt="ellipse-6-copy">
+            <img src="./img/youtube.svg" alt="youtube-icon">
+          </div>
+        </a>
+        <a href="http://pinterest.com" target="_blank">
+          <div class="contact__im-social__picture">
+            <img src="./img/ellipse-6.svg" alt="ellipse-6">
+            <img src="./img/ellipse-6-copy.svg" alt="ellipse-6-copy">
+            <img src="./img/pinterest.svg" alt="pinterest-icon">
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="loading">
+    <div class="loading__text">
+      <span class="loading__text__words">L</span>
+      <span class="loading__text__words">O</span>
+      <span class="loading__text__words">A</span>
+      <span class="loading__text__words">D</span>
+      <span class="loading__text__words">I</span>
+      <span class="loading__text__words">N</span>
+      <span class="loading__text__words">G</span>
+    </div>
+  </div>
+
+  <div class="weather">
+    <h1>Enter the city and get a weather</h1>
+    <form class="weather__form">
+      <input type="text" placeholder="Enter the city" class="weather__form__input">
+      <button type="submit" value="Submit" class="weather__form__button">Get weather</button>
+    </form>
+    <div class="weather__response">
+      <h1>Weather:</h1>
+      <p class="weather__response__temp"></p>
+      <p class="weather__response__desc"></p>
+    </div>
+  </div>
+
+  <div class="popup">
+    <div class="popup__bg">
+      <label>
+        Are you still here?
+      </label>
+      <button type="submit">Yes</button>
+    </div>
+  </div>
+
+  <script src="js/popup.js"></script>
+
+  <script src="js/spinner.js"></script>
+  <script src="js/checkInactivity.js"></script>
+  <script src="js/setTheme.js"></script>
+  <script src="js/progressBar.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/infiniteScroll.js"></script>
+  <script type="module" src="js/portfolio.js"></script>
+  <script src="js/formValidation.js"></script>
+  <script src="js/weather.js"></script>
+</body>
+
+</html>

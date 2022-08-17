@@ -61,5 +61,47 @@
 		"about": "Learn to Program using the Popular C Programming Language",
 		"pages": 323,
 		"year": "2015"
+	},
+	{
+		"title": "Clean Code: A Handbook of Agile Software Craftsmanship",
+		"image": "./img/book-images/clean-code.webp",
+		"about": "The programming book has a galore of practical examples about the how and why of writing clean code",
+		"pages": 464,
+		"year": "2008"
+	},
+	{
+		"title": "Introduction to Algorithms",
+		"image": "./img/book-images/introduction-to-algorithms.webp",
+		"about": "The name of the book is self-explanatory. It is what the title suggests, i.e., Introduction to Algorithms",
+		"pages": 1312,
+		"year": "2009"
+	},
+	{
+		"title": "Code Complete: A Practical Handbook of Software Construction",
+		"image": "./img/book-images/code-complete.webp",
+		"about": "The programming book has no shortage of code examples that thoroughly illustrate the art of and science behind software development",
+		"pages": 850,
+		"year": "2004"
+	},
+	{
+		"title": "The Pragmatic Programmer",
+		"image": "./img/book-images/the-pragmatic-programmer.webp",
+		"about": "This book is for every coder looking to transcend to be a skilled software developer and a full-fledged programmer",
+		"pages": "320",
+		"year": "1999"
+	},
+	{
+		"title": "Refactoring: Improving the Design of Existing Code",
+		"image": "./img/book-images/refactoring.webp",
+		"about": "Refactoring is a vital programming concept for understanding the underlying aspects of writing clean, robust code",
+		"pages": "448",
+		"year": "1999"
+	},
+	{
+		"title": "Design Patterns: Elements of Reusable Object-Oriented Software",
+		"image": "./img/book-images/design-pattern.webp",
+		"about": "The Design Patterns book exhaustively explains 23 software design patterns that help software developers and designers in crafting better, elegant, and flexible software",
+		"pages": "395",
+		"year": "1994"
 	}
 ]

@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="./css/fonts/fonts.css">
-  <link rel="stylesheet" href="./css/change-theme.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <script src="js/autoThemeChanger.js"></script>
 </head>
 
@@ -37,8 +37,8 @@
     </div>
   </header>
   <div class="progress">
-    <div class="progress-container">
-      <div class="progress-bar" id="myBar"></div>
+    <div class="progress__container">
+      <div class="progress__bar" id="progressBar"></div>
     </div>
   </div>
   <div class="slider">
@@ -70,12 +70,14 @@
       <a class="slider__slideshow__button slider__slideshow__button_previous" onclick="setSlides(-1)">❮</a>
       <a class="slider__slideshow__button slider__slideshow__button_next" onclick="setSlides(1)">❯</a>
     </div>
-    <p class="slider__text">Hello, Im John Doe</p>
-    <p class="slider__text">Welcome to Retro, My wonderful theme!</p>
+    <div class="slider__text">
+      <p>Hello, Im John Doe</p>
+      <p>Welcome to Retro, My wonderful theme!</p>
+    </div>
   </div>
   <div class="about" id="about">
     <h1>About me</h1>
-    <div class="about__divider">
+    <div class="divider">
       <img src="./img/rectangle-5.svg" alt="rectangle-5">
       <span>x x x</span>
       <img src="./img/rectangle-5.svg" alt="rectangle-5">
@@ -156,7 +158,7 @@
   </div>
   <div class="portfolio" id="portfolio">
     <h1>Portfolio</h1>
-    <div class="about__divider">
+    <div class="divider">
       <img src="./img/rectangle-5.svg" alt="rectangle-5">
       <span>x x x</span>
       <img src="./img/rectangle-5.svg" alt="rectangle-5">
@@ -164,14 +166,10 @@
     <h4>Simplicity is the ultimate sophistication</h4>
     <span>Filter by</span>
     <ul class="portfolio__filter">
-      <li>design</li>
-      <li>logo</li>
-      <li>photography</li>
-      <li>poster</li>
-      <li>resources</li>
-      <li>retro</li>
-      <li>t-shirts</li>
-      <li>videos</li>
+      <li id="frequentUsed">frequent used</li>
+      <li id="name">name</li>
+      <li id="onReact">react</li>
+      <li id="price">price</li>
     </ul>
     <div class="portfolio__gallery" id="portfolio__gallery"></div>
     <div>
@@ -180,79 +178,27 @@
     </div>
   </div>
 
-  <div class="courses-container"></div>
+  <div class="container">
 
+  </div>
+
+  <!-- <div class="courses-container"></div> -->
 
   <div class="blog" id="blog">
     <h1>My blog</h1>
-    <div class="about__divider">
+    <div class="divider">
       <img src="./img/rectangle-5.svg" alt="rectangle-5">
       <span>x x x</span>
       <img src="./img/rectangle-5.svg" alt="rectangle-5">
     </div>
-    <h2>News from my house</h2>
-    <!-- <div class="blog__article">
-      <img src="https://icon-library.com/images/cool-icon-picture/cool-icon-picture-18.jpg" alt=""
-        class="blog__article__photo">
-      <div class="blog__article__text">
-        <h3>The Magic Wheel</h3>
-        <div class="blog__article__text__resp">
-          <h4>July 28,2014//Admin//Fun, trevels, trends</h4>
-          <h5>1 Response</h5>
-        </div>
-        <img src="./img/rectangle-9.svg" alt="rectangle-9">
-        <p>Its not it to understand them in the objects we're playing. Products fufilling a product more innovative,
-          bullets grunts, powerful or stay at every mutivariate spacetime point of analysis. People have enormous serial
-          correlation. Good design is derived from so deep and them there's no other product useful. (MORE...)</p>
-      </div>
-    </div>
-    <div class="blog__article">
-      <img
-        src="https://fsb.zobj.net/crop.php?r=gcBCS6U9CO8W6vp2noLmDsSl6o6Mc3U9UMJPBpwOTDKc2ylumbAlVo83hIBh_R8im1KB8f1GtlhLyw8NiblotNqQpqFFNbbxPUpfQMfOjFvx88jAXWtej8wXp3AIRbZYzoU_uNvBy4b5IHlZhLPNJLiK4XXA3wAd6Qrs437RQaYXwkbqhJRN133Ez20"
-        alt="" class="blog__article__photo">
-      <div class="blog__article__text">
-        <h3>The Lonely Road</h3>
-        <div class="blog__article__text__resp">
-          <h4>July 28,2014//Admin//Fun, trevels, trends</h4>
-          <h5>3 Responses</h5>
-        </div>
-        <img src="./img/rectangle-9.svg" alt="rectangle-9">
-        <p>If you've studied design at all, you've probably encountered Lorem Ipsum placeholder text at some point.
-          Anywhere there is text, but the meaning of that text isn't particularly important, you might see Lorem Ipsum.
-          (MORE...)</p>
-      </div>
-    </div>
-    <div class="blog__article">
-      <img
-        src="https://is5-ssl.mzstatic.com/image/thumb/Purple115/v4/91/7b/4e/917b4ebe-1057-e324-6899-494998f50a3f/source/512x512bb.jpg"
-        alt="" class="blog__article__photo">
-      <div class="blog__article__text">
-        <h3>I love gasoline smell</h3>
-        <div class="blog__article__text__resp">
-          <h4>July 28,2014//Admin//Fun, trevels, trends, Web design</h4>
-          <h5>No Responses</h5>
-        </div>
-        <img src="./img/rectangle-9.svg" alt="rectangle-9">
-        <p>Many of the content, and often about their precious turfpossessed selves and principles are shortcomings of
-          seeing and colors to cover up a paicity of design. Zero out your interface. I think that are deep and profound
-          indeed these tasks and showing. (MORE...)</p>
-      </div>
-    </div> -->
-
-    <!-- <div class="blog__article__list">
-    </div>
-    <div class="blog__divider">
-      <img src="./img/rectangle-8.svg" alt="rectangle-8">
-      <button class="blog__button" onclick="loadData()">Show all posts</button>
-    </div> -->
-
-    <div class="content">
-      <button onclick="loadData()" class="load-more-button">SHOW ALL POSTS</button>
+    <h2>Some books to read</h2>
+    <div class="blog__content">
+      <button onclick="loadData()" class="blog__content__button">SHOW ALL POSTS</button>
     </div>
   </div>
   <div class="contact" id="contact">
     <h1>Contact me</h1>
-    <div class="about__divider">
+    <div class="divider">
       <img src="./img/rectangle5.svg" alt="rectangle5">
       <span>x x x</span>
       <img src="./img/rectangle5.svg" alt="rectangle5">
@@ -261,7 +207,7 @@
     <div class="error"></div>
     <form class="contact__form" id="form">
       <div class="contact__form__field">
-        <input type="text" name="name" id="name" class="contact__form__field__input" placeholder="Name"
+        <input type="text" name="username" id="username" class="contact__form__field__input" placeholder="Name"
           autocomplete="off">
         <small></small>
       </div>
@@ -271,15 +217,13 @@
         <small></small>
       </div>
       <div class="contact__form__field">
-        <input type="text" name="subject" id="subject" class="contact__form__field__input" placeholder="Subject"
-          autocomplete="off">
+        <input type="text" name="subject" id="subject" class="contact__form__field__input"
+          placeholder="Subject (order, etc.)" autocomplete="off">
         <small></small>
       </div>
-      <div class="contact__form__field">
-        <textarea class="contact__form__field__textarea" id="textarea" placeholder="Your message"></textarea>
-      </div>
+      <textarea class="contact__form__textarea" id="textarea" placeholder="Your message"></textarea>
       <div class="contact__form__submit">
-        <input type="submit" value="Send message" onclick="saveData()">
+        <input type="submit" id="submit" value="Send message" onclick="saveData()">
       </div>
     </form>
     <div class="contact__im-social">
@@ -300,7 +244,7 @@
             <img src="./img/facebook.svg" alt="fb-icon">
           </div>
         </a>
-        <a href="http://instagram.com" target="_blank">
+        <a href="http://instagram.com/elmaksimka" target="_blank">
           <div class="contact__im-social__picture">
             <img src="./img/ellipse-6.svg" alt="ellipse-6">
             <img src="./img/ellipse-6-copy.svg" alt="ellipse-6-copy">
@@ -361,15 +305,21 @@
   <script src="js/popup.js"></script>
 
   <script src="js/spinner.js"></script>
-  <script src="js/checkInactivity.js"></script>
   <script src="js/setTheme.js"></script>
   <script src="js/progressBar.js"></script>
   <script src="js/slider.js"></script>
-  <script src="js/app.js"></script>
   <script src="js/infiniteScroll.js"></script>
   <script type="module" src="js/portfolio.js"></script>
   <script src="js/formValidation.js"></script>
   <script src="js/weather.js"></script>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      offset: 400,
+      duration: 1000
+    });
+  </script>
 </body>
 
 </html>

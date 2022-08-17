@@ -4,11 +4,11 @@ fetch("../books.json")
 	localStorage.setItem("books", JSON.stringify(books));
 });
 
-let container = document.querySelector(".content");
-let loadMoreButton = document.querySelector(".content button");
+let container = document.querySelector(".blog__content");
+let loadMoreButton = document.querySelector(".blog__content button");
 
 let initialItems = 3;
-let loadItems = 6;
+let loadItems = 12;
 
 function loadInitialItems(){
 	let books = JSON.parse(localStorage.getItem("books"));
@@ -17,14 +17,14 @@ function loadInitialItems(){
 	for(let book of books){
 		if(counter < initialItems){
 			out += `
-				<div class="book">
-					<div class="left">
-						<img src="${book.image}" alt="">
+				<div class="blog__content__book" data-aos="fade-left">
+					<div class="blog__content__book__picture">
+						<img src="${book.image}">
 					</div>
-					<div class="right">
-						<p class="title">${book.title}</p>
-						<p class="about">${book.about}</p>
-						<p class="info">Pages: ${book.pages} / Year: ${book.year} </p>
+					<div class="blog__content__book__text">
+						<p class="blog__content__book__text__title">${book.title}</p>
+						<p class="blog__content__book__text__about">${book.about}</p>
+						<p class="blog__content__book__text__info">Pages: ${book.pages} / Year: ${book.year} </p>
 					</div>
 				</div>
 			`;
@@ -39,21 +39,21 @@ function loadInitialItems(){
 
 function loadData(){
 	let books = JSON.parse(localStorage.getItem("books"));
-	let currentDisplayedItems = document.querySelectorAll(".book").length;
+	let currentDisplayedItems = document.querySelectorAll(".blog__content__book").length;
 	
 	let out = "";
 	let counter = 0;
 	for(let book of books){
 		if(counter >= currentDisplayedItems && counter < loadItems + currentDisplayedItems){
 			out += `
-				<div class="book">
-					<div class="left">
-						<img src="${book.image}" alt="">
+				<div class="blog__content__book" data-aos="fade-right">
+					<div class="blog__content__book__picture">
+						<img src="${book.image}">
 					</div>
-					<div class="right">
-						<p class="title">${book.title}</p>
-						<p class="about">${book.about}</p>
-						<p class="info">Pages: ${book.pages} / Year: ${book.year} </p>
+					<div class="blog__content__book__text">
+						<p class="blog__content__book__text__title">${book.title}</p>
+						<p class="blog__content__book__text__about">${book.about}</p>
+						<p class="blog__content__book__text__info">Pages: ${book.pages} / Year: ${book.year} </p>
 					</div>
 				</div>
 			`;
@@ -66,7 +66,7 @@ function loadData(){
 	div.innerHTML = out;	
 	div.style.opacity = 0;
 
-	if(document.querySelectorAll(".book").length == books.length){
+	if(document.querySelectorAll(".blog__content__book").length == books.length){
 		loadMoreButton.style.display = "none";
 	}
 
@@ -85,9 +85,4 @@ function fadeIn(div){
 	}, 30);
 }
 
-// window.onscroll = function(ev) {
-//     if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-//        loadData();
-//     }
-// };
 loadInitialItems();

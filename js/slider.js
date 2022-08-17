@@ -6,8 +6,8 @@ function setSlides(num) {
 }
 
 function displaySlides(num) {
-  var x;
-  var slides = document.getElementsByClassName("slider__slideshow__image-slide");
+  let x;
+  let slides = document.getElementsByClassName("slider__slideshow__image-slide");
   if (num > slides.length) { currentIndex = 1 }
   if (num < 1) { currentIndex = slides.length }
   for (x = 0; x < slides.length; x++) {

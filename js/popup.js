@@ -6,13 +6,14 @@ document.addEventListener('click', () => {
     popupBg.classList.remove('active');
 });
 
-setIdleTimeout(6000, function() {
+setIdleTimeout(65000, function() {
     popup.classList.add('active');
     popupBg.classList.add('active');
+    setTimeout(() => window.close(), 10000);
 });
 
-function setIdleTimeout(millis, onIdle, onUnidle) {
-    var timeout = 0;
+function setIdleTimeout(millis, onIdle) {
+    let timeout = 0;
     startTimer();
 
     function startTimer() {
@@ -29,8 +30,6 @@ function setIdleTimeout(millis, onIdle, onUnidle) {
     function onActivity() {
         if (timeout) {
           clearTimeout(timeout);
-        } else {
-          onUnidle();
         }
         document.removeEventListener("mousemove", onActivity);
         document.removeEventListener("keypress", onActivity);

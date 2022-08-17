@@ -1,4 +1,4 @@
-const usernameEl = document.querySelector('#name');
+const usernameEl = document.querySelector('#username');
 const emailEl = document.querySelector('#email');
 const subjectEl = document.querySelector('#subject');
 const messageEl = document.querySelector('#textarea');
@@ -15,10 +15,6 @@ const checkUsername = () => {
       showError(usernameEl, 'Username should contain only latin letters without any numbers and spaces');
     } else if (!isFirstLetterUppercase(username)) {
       showError(usernameEl, 'Username should start with capital letter.');
-    // } else if (containsNumbers(username)) {
-    //   showError(usernameEl, 'Username should not contain any numbers.');
-    // } else if (containsSpaces(username)) {
-    //   showError(usernameEl, 'Username should not contain any spaces.');
     } else {
         showSuccess(usernameEl);
         valid = true;
@@ -56,33 +52,23 @@ const checkSubject = () => {
 };
 
 const isLatin = (username) => {
-    const re = /^[a-zA-Z]+$/;
-    return re.test(username);
+    const regExp = /^[a-zA-Z]+$/;
+    return regExp.test(username);
 };
 
 const isFirstLetterUppercase = (username) => {
-  const re = /^[A-Z]/;
-  return re.test(username);
+  const regExp = /^[A-Z]/;
+  return regExp.test(username);
 };
 
-// const containsSpaces = (username) => {
-//   const re = /\s/g;
-//   return re.test(username);
-// }
-
-// const containsNumbers = (username) => {
-//   const re = /\d/;
-//   return re.test(username);
-// };
-
 const isEmailValid = (email) => {
-    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(email);
+    const regExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return regExp.test(email);
 };
 
 const containsOnlyLetters = (subject) => {
-  const re = /^[a-zA-Z]+$/;
-  return re.test(subject);
+  const regExp = /^[a-zA-Z]+$/;
+  return regExp.test(subject);
 };
 
 const isRequired = value => value === '' ? false : true;
@@ -119,17 +105,28 @@ form.addEventListener('submit', function (e) {
         isSubjectValid
 
     if (isFormValid) {
+        const div = document.createElement('div');
+        div.className = 'alert';
+        div.appendChild(document.createTextNode('Success'));
+        const container = document.querySelector('.contact');
+        const form = document.querySelector('#form');
+        container.insertBefore(div, form);
+        setTimeout(() => document.querySelector('.alert').remove(), 3000);
+        form.reset();
     }
 });
 
 function saveData() {
-  const usernameEl = document.querySelector('#name').value;
+  const usernameEl = document.querySelector('#username').value;
   const emailEl = document.querySelector('#email').value;
   const subjectEl = document.querySelector('#subject').value;
   const messageEl = document.querySelector('#textarea').value;
   localStorage.setItem("username", usernameEl);
   localStorage.setItem("email", emailEl);
   localStorage.setItem("subject", subjectEl);
+  if (subjectEl.toLowerCase()==="order") {
+    alert('We will call you soon!');
+  }
   localStorage.setItem("message", messageEl);
 }
 

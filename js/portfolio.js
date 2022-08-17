@@ -1,165 +1,77 @@
-// var status = function (response) {
-//   if (response.status !== 200) {
-//     return Promise.reject(new Error(response.statusText))
+async function getProjects() {
+  let url = 'http://localhost:3000/projects';
+  try {
+      let res = await fetch(url);
+      return await res.json();
+  } catch (error) {
+      console.log(error);
+  }
+}
+
+let generalProjects = await getProjects();
+const lastProjectsElements = generalProjects.slice(-6);
+
+async function renderProjects(projects) {
+  let html = '';
+
+  projects.map(project => {
+      let htmlSegment = `<div id="test">
+      <div class="user">
+                           <img src="${project.image}" >
+                           <h2>Project name: ${project.project_name}</h2>
+                           <div id="test-hidden" class="test-hidden">
+                            <span>${project.created_at}</span>
+                            <span>${project.technologies}</span>
+                            <span>${project.price}</span>
+                          </div>
+                         </div>
+                         </div>`;
+      html += htmlSegment;
+  });
+
+  let container = document.querySelector('.container');
+  container.innerHTML = html;
+}
+
+renderProjects(lastProjectsElements);
+
+// document.addEventListener('mouseover', function (e) {
+//   if (e.target && e.target.id === 'test') {
+//      document.querySelector('.test-hidden').style.display = 'block';
 //   }
-//   return Promise.resolve(response)
-// }
-// var json = function (response) {
-//   return response.json()
-// }
-
-// const apiResult = []; 
-
-// fetch('http://localhost:3000/projects')
-//   .then(status)
-//   .then(json)
-//   .then(function (data) {
-//     apiResult.push(data)
-//   })
-//   .catch(function (error) {
-//     console.log('error', error)
-//   });
-
-// const container = document.getElementById('portfolio__gallery');
-
-// apiResult.forEach((result) => {
-//   document.createElement('div');
-  
 // })
 
-const courses = [
-  {
-    url: "#",
-    title: "Drawing Essentials",
-    thumbnail: "img/course1.png",
-    category: "Art",
-    description: "Learn to draw and color with the extensive course.",
-    price: "299.99",
-    date: "12.12.2022",
-  },
+const frequentUsed = document.querySelector('#frequentUsed');
+const name = document.querySelector('#name');
+const onReact = document.querySelector('#onReact');
+const price = document.querySelector('#price');
 
-  {
-    url: "#",
-    title: "Design Masterclass",
-    category: "Design",
-    thumbnail: "img/course2.png",
-    description: "Learn the basic theories behind excellent designs.",
-    price: "119.99",
-    date: "22.12.2022",
-  },
-
-  {
-    url: "#",
-    title: "How AI Works?",
-    category: "Technology",
-    thumbnail: "img/course3.png",
-    description:
-      "This course is for those who are interested in getting started with AI.",
-    price: "149.99",
-    date: "02.01.2023",
-  },
-
-  {
-    url: "#",
-    title: "Adobe XD - The Crash Course",
-    category: "Design",
-    thumbnail: "img/course4.png",
-    description: "Learn how to use Adobe XD to create stunning websites.",
-    price: "99.99",
-    date: "12.01.2023",
-  },
-  {
-    url: "#",
-    title: "Adobe XD - The Crash Course",
-    category: "Design",
-    thumbnail: "img/course4.png",
-    description: "Learn how to use Adobe XD to create stunning websites.",
-    price: "99.99",
-    date: "22.01.2023",
-  },
-  {
-    url: "#",
-    title: "Adobe XD - The Crash Course",
-    category: "Design",
-    thumbnail: "img/course4.png",
-    description: "Learn how to use Adobe XD to create stunning websites.",
-    price: "99.99",
-    date: "02.02.2023",
-  },
-];
-
-const coursesContainer = document.querySelector(".courses-container");
-
-const displayCourse = (
-  urlValue,
-  titleValue,
-  categoryValue,
-  thumbnailValue,
-  descriptionValue,
-  priceValue,
-  dateValue
-) => {
-  const card = document.createElement("div");
-  card.classList.add("card");
-
-  const a = document.createElement("a");
-  a.setAttribute("href", urlValue);
-
-  const category = document.createElement("div");
-  category.classList.add("category");
-  category.innerHTML = categoryValue;
-
-  const img = document.createElement("img");
-  img.setAttribute("src", thumbnailValue);
-
-  const title = document.createElement("h2");
-  title.classList.add("title");
-  title.innerHTML = titleValue;
-
-  const description = document.createElement("div");
-  description.classList.add("description");
-  description.innerHTML = descriptionValue;
-
-  const info = document.createElement("div");
-  info.classList.add("info");
-
-  const price = document.createElement("div");
-  price.classList.add("price");
-  price.innerHTML = priceValue;
-
-  const date = document.createElement("div");
-  date.classList.add("date");
-  date.innerHTML = dateValue;
-
-
-
-  //   Appending Elements
-
-  coursesContainer.appendChild(card);
-  card.appendChild(a);
-  a.appendChild(category);
-  a.appendChild(img);
-  a.appendChild(title);
-  a.appendChild(description);
-  a.appendChild(info);
-
-  info.appendChild(price);
-  info.appendChild(date);
-
-};
-
-const generateCourseData = () => {
-  courses.forEach((c) => {
-    displayCourse(
-      c.url,
-      c.title,
-      c.category,
-      c.thumbnail,
-      c.description,
-      c.price,
-      c.date
-    );
+frequentUsed.addEventListener('click', () => {
+  const filteredByFrequentUsed = generalProjects.filter((item) => item.project_name.includes('Sonair'));
+  renderProjects(filteredByFrequentUsed);
+});
+name.addEventListener('click', () => {
+  const filteredByName = [...generalProjects];
+  filteredByName.sort((a,b) => {    
+    var textA = a.name;
+    var textB = b.name;
+    return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
   });
-};
+  console.log(filteredByName);
+  renderProjects(filteredByName);
+});
+onReact.addEventListener('click', () => {
+  const filteredByReact = generalProjects.filter((item) => item.technologies.find((item) => item === 'React'));
+  renderProjects(filteredByReact);
+});
+price.addEventListener('click', () => {
+  const filteredByPrice = [...generalProjects];
+  filteredByPrice.sort((a,b) => a.price - b.price);
+  console.log(filteredByPrice);
+  renderProjects(filteredByPrice);
+});
 
-generateCourseData();
+const button = document.querySelector('.portfolio__button');
+button.addEventListener('click', () => {
+  renderProjects(generalProjects);
+})

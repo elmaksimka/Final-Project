@@ -46,8 +46,8 @@ frequentUsed.addEventListener('click', () => {
   highPrice.style.backgroundColor = 'transparent';
   renderProjects(filteredByFrequentUsed);
 
-  if (button.style.display = 'none') {
-    button.style.display = 'block';
+  if (btn.style.display = 'none') {
+    btn.style.display = 'block';
   }
 });
 
@@ -58,8 +58,8 @@ onReact.addEventListener('click', () => {
   highPrice.style.backgroundColor = 'transparent';
   renderProjects(filteredByReact);
 
-  if (button.style.display = 'none') {
-    button.style.display = 'block';
+  if (btn.style.display = 'none') {
+    btn.style.display = 'block';
   }
 });
 
@@ -70,8 +70,8 @@ highPrice.addEventListener('click', () => {
   onReact.style.backgroundColor = 'transparent';
   renderProjects(filteredByPrice);
 
-  if (button.style.display = 'none') {
-    button.style.display = 'block';
+  if (btn.style.display = 'none') {
+    btn.style.display = 'block';
   }
 });
 
@@ -90,11 +90,11 @@ highPrice.addEventListener('dblclick', () => {
   renderProjects(generalProjects.slice(-6));
 });
 
-const button = document.querySelector('.portfolio__button');
-button.addEventListener('click', () => {
+const btn = document.querySelector('.portfolio__button');
+btn.addEventListener('click', () => {
   frequentUsed.style.backgroundColor = '#7ababa';
   onReact.style.backgroundColor = '#7ababa';
   highPrice.style.backgroundColor = '#7ababa';
   renderProjects(generalProjects);
-  button.style.display = 'none';
+  btn.style.display = 'none';
 })

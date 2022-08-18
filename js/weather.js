@@ -1,11 +1,11 @@
 var input = document.querySelector('.weather__form__input');
 var temp = document.querySelector('.weather__response__temp');
 var desc = document.querySelector('.weather__response__desc');
-var button = document.querySelector('.weather__form__button');
+var btn = document.querySelector('.weather__form__button');
 
-button.addEventListener('click', (e) => e.preventDefault())
+btn.addEventListener('click', (e) => e.preventDefault())
 
-button.addEventListener('click', function(name){
+btn.addEventListener('click', function(name){
 fetch('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&appid=bb264fbc9adefb525df4a7e9283969de')
 .then(response => response.json())
 .then(data => {

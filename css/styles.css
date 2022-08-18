@@ -236,9 +236,19 @@ body {
   text-transform: uppercase;
 }
 .portfolio__filter {
+  height: 150px;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+}
+.portfolio__filter__category {
+  width: 170px;
+  height: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+  background-image: url("../img/tag.svg");
 }
 .portfolio span {
   font-family: "Roboto Slab Regular", serif;
@@ -247,15 +257,43 @@ body {
   font-family: "Roboto Slab Regular", serif;
   margin-right: 10px;
 }
-.portfolio__gallery + div {
-  height: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+.portfolio__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
+  margin: 20px auto;
+  font-family: "Roboto", sans-serif;
 }
-.portfolio__gallery + div img {
-  width: 30px;
+.portfolio__container__project {
+  height: 100%;
+  border: solid 1px #ccd0d4;
+  border-radius: 0.3rem;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  min-height: 404px;
+  max-height: 800px;
+}
+.portfolio__container__project:hover {
+  background: darkmagenta;
+  color: white;
+  transition: background-color 1s, border-radius 1s, color 0.2s;
+  border-radius: 40px;
+}
+.portfolio__container__project__text-hidden {
+  display: none;
+}
+.portfolio__container__project:hover .portfolio__container__project__text-hidden {
+  display: block;
+}
+.portfolio__container__project:hover img {
+  display: none;
+}
+.portfolio__container img {
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  padding: 1rem;
+  background-color: #f4f4f4;
 }
 .portfolio__button {
   background: none;
@@ -263,6 +301,16 @@ body {
   font-family: "Oswald", sans-serif;
   font-weight: bold;
   text-transform: uppercase;
+}
+.portfolio__div {
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.portfolio__div img {
+  width: 30px;
 }
 
 .blog h1 {
@@ -670,8 +718,9 @@ body {
     padding-bottom: 10%;
   }
   .slider__item {
-    width: 50%;
-    height: 80px;
+    background-image: url("../img/ribbon.svg");
+    width: 1235px;
+    height: 135px;
   }
   .slider__text {
     margin-top: 200px;
@@ -709,6 +758,12 @@ body {
   }
   .weather__response {
     padding-bottom: 4%;
+  }
+}
+@media (max-width: 700px) {
+  .portfolio__container {
+    grid-template-columns: 1fr;
+    max-width: 320px;
   }
 }
 .alert {

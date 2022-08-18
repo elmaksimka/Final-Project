@@ -36,6 +36,7 @@
       </ul>
     </div>
   </header>
+
   <div class="progress">
     <div class="progress__container">
       <div class="progress__bar" id="progressBar"></div>
@@ -44,7 +45,7 @@
   <div class="slider">
     <h1>Retro</h1>
     <div class="slider__item">
-      <h4>Old style portfolio</h4>
+      <h4>Some clubs to watch</h4>
     </div>
     <div class="slider__slideshow">
       <div class="slider__slideshow__image-slide">
@@ -71,10 +72,11 @@
       <a class="slider__slideshow__button slider__slideshow__button_next" onclick="setSlides(1)">❯</a>
     </div>
     <div class="slider__text">
-      <p>Hello, Im John Doe</p>
-      <p>Welcome to Retro, My wonderful theme!</p>
+      <p>Hello, I'm Maks Zyshchuk!</p>
+      <p>Welcome to my page!</p>
     </div>
   </div>
+
   <div class="about" id="about">
     <h1>About me</h1>
     <div class="divider">
@@ -82,7 +84,7 @@
       <span>x x x</span>
       <img src="./img/rectangle-5.svg" alt="rectangle-5">
     </div>
-    <h4>Im graphic designer from Baltimore</h4>
+    <h4>I'm a simple guy from Rivne</h4>
     <div class="about__categories">
       <div class="about__categories__movies">
         <div class="about__categories__movies__head">
@@ -166,23 +168,16 @@
     <h4>Simplicity is the ultimate sophistication</h4>
     <span>Filter by</span>
     <ul class="portfolio__filter">
-      <li id="frequentUsed">frequent used</li>
-      <li id="name">name</li>
-      <li id="onReact">react</li>
-      <li id="price">price</li>
+      <li class="portfolio__filter__category" id="frequentUsed">frequent used</li>
+      <li class="portfolio__filter__category" id="onReact">on react</li>
+      <li class="portfolio__filter__category" id="highPrice">high price</li>
     </ul>
-    <div class="portfolio__gallery" id="portfolio__gallery"></div>
-    <div>
+    <div class="portfolio__container"></div>
+    <div class="portfolio__div">
       <img src="./img/rectangle-8.svg" alt="rectangle-8">
       <button class="portfolio__button">Browse all</button>
     </div>
   </div>
-
-  <div class="container">
-
-  </div>
-
-  <!-- <div class="courses-container"></div> -->
 
   <div class="blog" id="blog">
     <h1>My blog</h1>
@@ -196,6 +191,7 @@
       <button onclick="loadData()" class="blog__content__button">SHOW ALL POSTS</button>
     </div>
   </div>
+
   <div class="contact" id="contact">
     <h1>Contact me</h1>
     <div class="divider">
@@ -268,17 +264,6 @@
       </div>
     </div>
   </div>
-  <div class="loading">
-    <div class="loading__text">
-      <span class="loading__text__words">L</span>
-      <span class="loading__text__words">O</span>
-      <span class="loading__text__words">A</span>
-      <span class="loading__text__words">D</span>
-      <span class="loading__text__words">I</span>
-      <span class="loading__text__words">N</span>
-      <span class="loading__text__words">G</span>
-    </div>
-  </div>
 
   <div class="weather">
     <h1>Enter the city and get a weather</h1>
@@ -293,6 +278,18 @@
     </div>
   </div>
 
+  <div class="loading">
+    <div class="loading__text">
+      <span class="loading__text__words">L</span>
+      <span class="loading__text__words">O</span>
+      <span class="loading__text__words">A</span>
+      <span class="loading__text__words">D</span>
+      <span class="loading__text__words">I</span>
+      <span class="loading__text__words">N</span>
+      <span class="loading__text__words">G</span>
+    </div>
+  </div>
+
   <div class="popup">
     <div class="popup__bg">
       <label>
@@ -302,10 +299,9 @@
     </div>
   </div>
 
-  <script src="js/popup.js"></script>
-
   <script src="js/spinner.js"></script>
   <script src="js/setTheme.js"></script>
+  <script src="js/checkInactivity.js"></script>
   <script src="js/progressBar.js"></script>
   <script src="js/slider.js"></script>
   <script src="js/infiniteScroll.js"></script>
